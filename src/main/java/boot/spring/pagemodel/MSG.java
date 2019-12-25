@@ -1,18 +1,11 @@
 package boot.spring.pagemodel;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
 public class MSG {
-	String state;
-	
-	public MSG(String state) {
-		this.state = state;
-	}
+    String state;
 
-	public String getState() {
-		return state;
-	}
-
-	public void setState(String state) {
-		this.state = state;
-	}
-	
 }

@@ -1,27 +1,16 @@
 package boot.spring.po;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+
+@ApiModel("用户角色")
+@Data
 public class User_role {
-	int urid;
-	User user;
-	Role role;
-	
-	public int getUrid() {
-		return urid;
-	}
-	public void setUrid(int urid) {
-		this.urid = urid;
-	}
-	public User getUser() {
-		return user;
-	}
-	public void setUser(User user) {
-		this.user = user;
-	}
-	public Role getRole() {
-		return role;
-	}
-	public void setRole(Role role) {
-		this.role = role;
-	}
-	
+    int urid;
+    @ApiModelProperty(hidden = true)
+    User user;
+    Role role;
+
+
 }

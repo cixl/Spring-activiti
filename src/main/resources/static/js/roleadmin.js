@@ -9,10 +9,10 @@
 		    url:"roles",
 		    formatters: {
 		    "rights":function(column,row){
-		    	var len=row.role_permission.length;
+		    	var len=row.role_permissions.length;
 		    	var str="";
 		    	for(var t=0;t<len;t++)
-		    		str+=row.role_permission[t].permission.permissionname+',';
+		    		str+=row.role_permissions[t].permission.permissionname+',';
 		    	str=str.substring(0,str.length-1);
 				return str;
 		    },
@@ -31,7 +31,7 @@
 	    	    	var rid=$(this).data("row-id");
 	    	    	$.get("roleinfo/"+rid,function(data){
 	    	    		$("#rolename").val(data.rolename);
-	    	    		var role_permission=data.role_permission;
+	    	    		var role_permission=data.role_permissions;
 	    	    		var roles=[];
 	    	    		for(var a=0;a<role_permission.length;a++){
 	    	    			var name=role_permission[a].permission.permissionname;

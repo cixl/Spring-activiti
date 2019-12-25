@@ -1,8 +1,8 @@
 package boot.spring.mapper;
 
-import java.util.List;
-
 import boot.spring.po.UserRole;
+
+import java.util.List;
 
 
 public interface UserRoleMapper {
